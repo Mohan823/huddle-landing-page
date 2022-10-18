@@ -1,0 +1,128 @@
+@import "partials/partials";
+
+body {
+    font-family: $ff-body;
+    color: white;
+    background: no-repeat center/cover url(images/bg-desktop.svg), $clr-primary;
+    display: grid;
+    align-content: start;
+    max-width: 90rem;
+    margin: auto;
+
+    @include for-lg-scrn {
+        background: no-repeat top/contain url(images/bg-mobile.svg), $clr-primary;
+        place-items: center;
+    }
+}
+
+h1 {
+    font-family: $ff-headings;
+    font-weight: $fw-headings-semi-bold;
+    font-size: 2rem;
+
+    @include for-lg-scrn {
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    font-weight: $fw-body-regular;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+// Buttons
+
+button {
+    font-family: $ff-secondary;
+    font-size: 0.9375rem;
+    background-color: white;
+    color: $clr-primary;
+    padding: 0.8em 3.5em;
+    border: none;
+    border-radius: 100vmax;
+    box-shadow: 0 0.5em 1em 0em hsl(257, 40%, 30%);
+    cursor: pointer;
+
+    @include btn-hvr {
+        background-color: $clr-secondary;
+        color: #fff;
+    }
+
+    @include for-lg-scrn {
+        padding: 0.8em 5em;
+    }
+}
+
+// utility classes
+
+.home-icon {
+    max-width: 10rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    padding: 2rem 4rem;
+
+    @include for-tablet {
+        padding: 2rem 3rem;
+    }
+
+    @include for-lg-scrn {
+        padding: 2rem 2rem;
+    }
+}
+
+.even-columns {
+    display: grid;
+    grid-template-columns: auto minmax(36ch, 1fr);
+
+    @include for-lg-scrn {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content {
+    margin: 3rem 0 0 3rem;
+
+    >* {
+        margin-bottom: 1.2rem;
+    }
+
+    @include for-tablet {
+        margin: 1rem 0 0 2rem;
+    }
+
+    @include for-lg-scrn {
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 3rem 4em;
+
+    .social-icon {
+        width: 2rem;
+        fill: white;
+        aspect-ratio: 1;
+
+        @include btn-hvr {
+            fill: $clr-secondary;
+        }
+    }
+
+    li {
+        margin-inline: 0.5rem;
+    }
+
+    @include for-lg-scrn {
+        justify-content: center;
+    }
+}

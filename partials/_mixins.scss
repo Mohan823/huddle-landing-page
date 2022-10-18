@@ -1,0 +1,27 @@
+@mixin btn-hvr {
+    &:hover {
+        @content;
+    }
+
+    &:focus {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media(max-width: 48em) {
+        @content;
+    }
+}
+
+@mixin for-lg-scrn {
+    @media(max-width: 36em) {
+        @content;
+    }
+}
+
+@mixin for-md-scrn {
+    @media(max-width: 24em) {
+        @content;
+    }
+}

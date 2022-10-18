@@ -1,0 +1,214 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background: no-repeat center/cover url(images/bg-desktop.svg), hsl(257deg, 40%, 49%);
+  display: grid;
+  align-content: start;
+  max-width: 90rem;
+  margin: auto;
+}
+
+@media (max-width: 36em) {
+  body {
+    background: no-repeat top/contain url(images/bg-mobile.svg), hsl(257deg, 40%, 49%);
+    place-items: center;
+  }
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+@media (max-width: 36em) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-weight: 400;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  background-color: white;
+  color: hsl(257deg, 40%, 49%);
+  padding: 0.8em 3.5em;
+  border: none;
+  border-radius: 100vmax;
+  box-shadow: 0 0.5em 1em 0em hsl(257deg, 40%, 30%);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+}
+
+button:focus {
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+}
+
+@media (max-width: 36em) {
+  button {
+    padding: 0.8em 5em;
+  }
+}
+
+.home-icon {
+  max-width: 10rem;
+  margin-bottom: 4rem;
+}
+
+.container {
+  padding: 2rem 4rem;
+}
+
+@media (max-width: 48em) {
+  .container {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 36em) {
+  .container {
+    padding: 2rem 2rem;
+  }
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: auto minmax(36ch, 1fr);
+}
+
+@media (max-width: 36em) {
+  .even-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content {
+  margin: 3rem 0 0 3rem;
+}
+
+.content>* {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 48em) {
+  .content {
+    margin: 1rem 0 0 2rem;
+  }
+}
+
+@media (max-width: 36em) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 3rem 4em;
+}
+
+ul .social-icon {
+  width: 2rem;
+  fill: white;
+  aspect-ratio: 1;
+}
+
+ul .social-icon:hover {
+  fill: hsl(300deg, 69%, 71%);
+}
+
+ul .social-icon:focus {
+  fill: hsl(300deg, 69%, 71%);
+}
+
+ul li {
+  margin-inline: 0.5rem;
+}
+
+@media (max-width: 36em) {
+  ul {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
